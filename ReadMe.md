@@ -17,3 +17,8 @@ urlpatterns = [
     path("contact/",views.contact,name="contact"),
 ]
 ```
+```html
+{% load static %}
+<link rel="stylesheet" href="{%static 'style.css'%}">
+
+```
