@@ -63,3 +63,35 @@ urlpatterns = [
 <link rel="stylesheet" href="{%static 'style.css'%}">
 
 ```
+### When we make a new app using 
+```powershell
+python .\manage.py startapp chai
+```
+### Aware the whole app about the new app
+
+### go in the setting of the learnig django and 
+```py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'chai', # add the new file /app name
+]
+```
+### handling the urls of the different app 
+```py
+from django.contrib import admin
+from django.urls import path ,include ####
+from .import views
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', views.home,name="home"),
+    path('about/', views.about,name="about"),
+    path('contact/', views.contact,name="contact"),
+    path("chai/",include("chai.urls")), ###
+]
+```
