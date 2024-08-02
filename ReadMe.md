@@ -1,4 +1,28 @@
 # Hello world
+### install the uv
+```py
+pip install uv
+```
+### Then locate this 
+```
+.venv\Scripts\activate
+```
+### install Django
+```py
+uv pip install Django
+```
+### make the project
+```py
+django-admin startproject name_of_the_project
+```
+```py
+django-admin startproject LearingDjango
+```
+### Cd into that folder then run
+
+```py 
+python .\manage.py runserver
+```
 
 ## few important changes to be made is in setting to load html css and js and views for routes 
 
